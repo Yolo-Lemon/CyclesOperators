@@ -112,7 +112,7 @@ public class CyclesOperators {
         }
     }
 
-    //Вывести на экран равнобедренный треугольник из ^.
+    //Вывести на экран равнобедренный треугольник из ^.ПЕРЕДЕЛАТЬ
     private static void cyclesTask6() {
         int str = 0;
         int symbl = 0;
