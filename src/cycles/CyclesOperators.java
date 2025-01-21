@@ -108,20 +108,27 @@ public class CyclesOperators {
             }
             System.out.println(" Не чет " + mnoj2);
         } else {
-            System.out.print("N должен быть больше 0");
+            System.out.println("N должен быть больше 0");
         }
     }
 
     //Вывести на экран равнобедренный треугольник из ^.ПЕРЕДЕЛАТЬ
     private static void cyclesTask6() {
-        int str = 0;
-        int symbl = 0;
-        for (str = 0; str < 7; str++) {
-            for (symbl = str; symbl < 7; symbl++) {
+        int v = 5;
+        for (int i = 0, l=0; i < v; i++) {
+            if (i!=0) {
+                l+=2;
+            }
+            for (int j = v; j > i; j--) {
+                System.out.print("_");
+            }
+            for (int k = 0; k <= l; k++) {
                 System.out.print("^");
+                
             }
             System.out.println();
         }
+
     }
 
     //Вложенные циклы
