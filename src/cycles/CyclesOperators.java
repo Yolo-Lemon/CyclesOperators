@@ -115,16 +115,16 @@ public class CyclesOperators {
     //Вывести на экран равнобедренный треугольник из ^.ПЕРЕДЕЛАТЬ
     private static void cyclesTask6() {
         int v = 5;
-        for (int i = 0, l=0; i < v; i++) {
-            if (i!=0) {
-                l+=2;
+        for (int i = 0, l = 0; i < v; i++) {
+            if (i != 0) {
+                l += 2;
             }
             for (int j = v; j > i; j--) {
                 System.out.print("_");
             }
             for (int k = 0; k <= l; k++) {
                 System.out.print("^");
-                
+
             }
             System.out.println();
         }
