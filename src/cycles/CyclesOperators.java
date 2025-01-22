@@ -22,15 +22,16 @@ public class CyclesOperators {
         int a = 2;
         int b = 7;
         int n = 0;
+        System.out.print("Задча 1: ");
         if (a < b) {
-            for (int i = a; (i >= a) && (i <= b); i++) {
+            for (int i = a; (i <= b); i++) {
                 System.out.print(" " + i);
                 n++;
             }
         } else {
             System.out.print("А должен быть меньше В");
         }
-        System.out.println(" n = " + n);
+        System.out.println(" n= " + n);
 
     }
 
@@ -40,15 +41,16 @@ public class CyclesOperators {
         int a = 2;
         int b = 7;
         int n = 0;
+        System.out.print("Задча 2: ");
         if (a < b) {
-            for (int i = b - 1; (i > a) && (i < b); i--) {
+            for (int i = b - 1; (i > a); i--) {
                 System.out.print(" " + i);
                 n++;
             }
         } else {
             System.out.print("А должен быть меньше В");
         }
-        System.out.println(" n = " + n);
+        System.out.println(" n= " + n);
     }
 
     //Дано  целое  число  N  >  0 (N – количество множителей). Найти произведение 1,1 * 1,2 * 1,3 * …
@@ -64,57 +66,58 @@ public class CyclesOperators {
         } else {
             System.out.print("N должен быть больше 0");
         }
-        System.out.println(" " + mnoj);
+        System.out.println("Задача 3: " + mnoj);
     }
 
     //Дано  целое  число  N  >  0 (N – количество множителей). Найти значение выражения 1,1 – 1,2 + 1,3 – …
     private static void cyclesTask4() {
-        int n = 7;
+        int n = 6;
         double mnoj = 0;
         double num = 1;
         if (n > 0) {
             for (int i = 0; (i < n); i++) {
+                num += 0.1;
                 if (i % 2 == 0) {
-                    num += 0.1;
                     mnoj = mnoj + num;
                 } else {
-                    num += 0.1;
                     mnoj = mnoj - num;
                 }
             }
         } else {
             System.out.print("N должен быть больше 0");
         }
-        System.out.println(" " + mnoj);
+        System.out.println("Задача 4: " + mnoj);
     }
 
-    //Дано  целое  число  N  >  0.  Если  N  —  нечетное,  то вывести  произведение  1·3·...·N;  если  N  —  четное,  то вывести  произведение  2·4·...·N.  
+    //Дано  целое  число  N  >  0.  Если  N  —  нечетное,  то вывести  произведение  1·3·...·N;  если  N  —  четное,  то вывести  произведение  2·4·...·N.
     private static void cyclesTask5() {
-        int n = 5;
-        double mnoj1 = 1;
-        double mnoj2 = 1;
-        double num1 = 0;
-        double num2 = -1;
-        if (n > 0 && n % 2 == 0) {
-            for (int i = 0; (i < n); i++) {
-                num1 += 2;
-                mnoj1 = mnoj1 * num1;
-            }
-            System.out.println("Чет " + mnoj1);
-        } else if (n > 0 && n % 2 != 0) {
-            for (int i = 0; (i < n); i++) {
-                num2 += 2;
-                mnoj2 = mnoj2 * num2;
-            }
-            System.out.println(" Не чет " + mnoj2);
-        } else {
+        int n = 6;
+        int mnoj = 1;
+        if (n <= 0) {
             System.out.println("N должен быть больше 0");
         }
+        for (int i = 1; i <= n; i++) {
+            if (n % 2 == 0) {
+                if (i % 2 == 0) {
+                    mnoj = mnoj * i;
+                } else {
+                    continue;
+                }
+            } else if (n % 2 != 0) {
+                if (i % 2 != 0) {
+                    mnoj = mnoj * i;
+                } else {
+                    continue;
+                }
+            }
+        }
+        System.out.println("Задача 5: " + mnoj);
     }
 
-    //Вывести на экран равнобедренный треугольник из ^.ПЕРЕДЕЛАТЬ
+    //Вывести на экран равнобедренный треугольник из ^.
     private static void cyclesTask6() {
         int v = 5;
+        System.out.println("Задача 6: ");
         for (int i = 0, l = 0; i < v; i++) {
             if (i != 0) {
                 l += 2;
@@ -145,7 +148,7 @@ public class CyclesOperators {
             }
             summ += num;
         }
-        System.out.println(summ);
+        System.out.println("Задача 7: " + summ);
     }
 
     //Даны целые положительные числа A и B (A < B). 
@@ -154,11 +157,11 @@ public class CyclesOperators {
         int a = 3;
         int b = 8;
         if (a < b) {
-            for (int i = a; i <= b && i >= a; i++) {
-                for (int k = i; k <= i && k > 0; k--) {
+            System.out.print("Задача 8: ");
+            for (int i = a; i <= b; i++) {
+                for (int k = i; k > 0; k--) {
                     System.out.print(" " + i);
                 }
-
             }
             System.out.println();
         } else {
@@ -169,26 +172,26 @@ public class CyclesOperators {
     // WHILE
     //Дано целое число N (>1). Найти наименьшее целое число K, при котором выполняется неравенство 3^k > N.
     private static void cyclesTask9() {
-        int n = 500;
+        int n = 10;
         int k = n;
         if (n > 1) {
-            while (Math.pow(3, k) > n) {
+            do {
                 k--;
-            }
-            System.out.println(k);
+            } while (Math.pow(3, k) > n);
+            System.out.println("Задача 9:" + k);
         } else
             System.out.println("N должен быть больше 1");
     }
 
     //Дано целое число N (>1). Найти наибольшее целое число K, при котором выполняется неравенство 3^k < N.
     private static void cyclesTask10() {
-        int n = 1026;
+        int n = 10;
         int k = n;
         if (n > 1) {
-            while (Math.pow(3, k) > n) {
+            do {
                 k--;
-            }
-            System.out.println(k);
+            } while (Math.pow(3, k) > n);
+            System.out.println("Задача 10" + k);
         } else
             System.out.println("N должен быть больше 1");
     }
