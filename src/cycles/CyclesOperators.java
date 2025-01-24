@@ -199,16 +199,15 @@ public class CyclesOperators {
 
     // Треугольник на отдыхе
     private static void cyclesTask11() {
-        int n = 5;
+        int n = 7;
         int x = n;
-        for (int i = (n * 2) - 1; i > 0; i--) {
-
+        for (int i = (n*2)-1; i > 0; i--) {
             for (int k = x; k <= n; k++) {
                 System.out.print(">");
             }
-            if (i <= 5) {
+            if (i <=n) {
                 x++;
-            } else if (i > 5) {
+            } else if (i > n) {
                 x--;
             }
             System.out.println();
