@@ -12,6 +12,7 @@ public class CyclesOperators {
         cyclesTask8();
         cyclesTask9();
         cyclesTask10();
+        cyclesTask11();
 
     }
 
@@ -194,5 +195,24 @@ public class CyclesOperators {
             System.out.println("Задача 10" + k);
         } else
             System.out.println("N должен быть больше 1");
+    }
+
+    // Треугольник на отдыхе
+    private static void cyclesTask11() {
+        int n = 5;
+        int x = n;
+        for (int i = (n * 2) - 1; i > 0; i--) {
+
+            for (int k = x; k <= n; k++) {
+                System.out.print(">");
+            }
+            if (i <= 5) {
+                x++;
+            } else if (i > 5) {
+                x--;
+            }
+            System.out.println();
+        }
+
     }
 }
