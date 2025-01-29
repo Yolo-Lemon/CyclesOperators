@@ -199,7 +199,7 @@ public class CyclesOperators {
 
     // Треугольник на отдыхе
     private static void cyclesTask11() {
-        int n = 7;
+        int n = 1;
         int x = n;
         for (int i = (n*2)-1; i > 0; i--) {
             for (int k = x; k <= n; k++) {
